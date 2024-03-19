@@ -202,216 +202,99 @@ body {
 .site-name:hover {
     color:#fbf1cf;
 }
-.kaas {
-    text-decoration: underline;
-    font-size: 2rem;
-}
 
 .desc {
     font-size: 1.5rem;
 }
-button {
-    font-family: inherit;
-    font-size: 1.5rem;
-    padding-inline: 1rem;
-    padding-block: 1rem;
-    margin-block: 2rem;
-}
-.get-quote:hover {
-    cursor: pointer;
-    background-color: green;
-}
+
 /* PAGE TITLE CONTAINER ENDS */
 
 
 
 
-/* MOVIES CONTAINER STARTS */
 
-.content-container {
+/* NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS NAV STARTS  */
+.nav-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     max-width: 50%;
     margin-inline: auto;
+    margin-block: 2rem;
 }
-.content-container > * {
-    margin-block: 1rem;
-}
-
-.kanyes-quotes{
-    text-align: center;
-    margin-top: 1rem;
-    padding: 2rem;
-
-    font-size: 2rem;
-    background-color: rgba(157, 123, 0, 0.635);
-    border-radius: 2rem;;
-}
-.rate-cta {
-    text-decoration: underline;
-}
-.rate-quote {
+.nav-items {
     display: flex;
-
-    font-size: 4rem;
+    
+    
 }
-.rate-quote > * {
+.nav-items > * {
     margin-inline: 30px;
-    padding: 10px;
+    margin-block: 1rem;
+    padding: 20px;
     border-radius: 1rem;
     border: 1px solid;
-
+    
     font-size: 2rem;
 }
-.rate-quote > *:hover {
+.nav-items > *:hover {
     cursor: pointer;
+    background-color: darkgreen;
 }
-.kanyes-thank-you {
+.nav-items > *:visited {
+    color: inherit;
+}
+/* NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS  */
+
+
+
+
+
+/* NEW MESSAGE CONTAINER STARTS NEW MESSAGE CONTAINER STARTS NEW MESSAGE CONTAINER STARTS NEW MESSAGE CONTAINER STARTS  */
+.pure-form {
+    margin-inline:auto;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset > * {
+    width: 50%;
     text-align: center;
 }
-
-/* MOVIES CONTAINER ENDS*/
-
-.quotes-and-ratings {
+fieldset > #viesti, #fun-fact {
+    height: 100px;
 }
-.headers-container {
+fieldset > button {
+    margin-top: 20px;
+}
+.custom-restricted-width {
+    /* To limit the menu width to the content of the menu: */
+    display: inline-block;
+    /* Or set the width explicitly: */
+    /* width: 10em; */
+}
+/* NEW MESSAGE CONTAINER ENDS NEW MESSAGE CONTAINER ENDS NEW MESSAGE CONTAINER ENDS NEW MESSAGE CONTAINER ENDS NEW MESSAGE CONTAINER ENDS  */
+
+
+/* GUESTBOOK STARTS GUESTBOOK STARTS GUESTBOOK STARTS GUESTBOOK STARTS GUESTBOOK STARTS GUESTBOOK STARTS  */
+.guestbook-container {
     display: flex;
-    margin-inline: auto;
-    width: 50%;
-    justify-content: space-around;
-    background-color: red;
-    font-size: 2rem;;
-    border-radius: 1px;
-    padding: 1rem;
-    text-decoration: underline;
-    border: 5px solid;
-
-
-
+    flex-direction: column;
 }
-.headers-container:nth-child(1) {
-    border: 5px solid;
-    color: black;
-
-}
-.quotes-container {
+.guestbook-item {
     display: flex;
-    margin-inline: auto;
+    flex-direction: column;
     width: 50%;
-    justify-content: space-around;
-    background-color: red;
-    font-size: 2rem;;
-    border-radius: 1px;
-    padding: 1rem;
-
+    align-items: center;
+    text-align: center;
+    margin-block: 1rem;
+    margin-inline: auto;
 }
-.rating {
+.guestbook-item > * {
+    margin-block: 10px;
+}
+.guestbook-item > h2 {
     font-size: 2rem;
-    margin-top: 1rem;
-    text-decoration: underline;
 }
-
-
-.clear-history {
-    margin-inline: auto;
-    width: 10%;
-    font-size: 1rem;;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1rem;;
-    border: 0px;
-    outline: 0px;
-}
-.clear-history:hover {
-    background-color: red;
-}
-
-
-
-/* General SHOW/HIDE item classes STARTS */
-.show-element {
-    display: flex;
-}
-.hide-element {
-    display: none;
-}
-/* General SHOW/HIDE item classes ENDS*/
-
-
-
-
-/* ALL HOVER effects & transitions STARTS*/
-.hover-effect:hover {
-    transform: scale(1.1);
-    transition: transform 0.1s ease-in-out;
-    opacity: 1;
-}
-/* ALL HOVER effects & transitions ENDS*/
-
-
-
-/* ANIMATIONS STARTS */
-/* Notice text animation */
-.choose-theatre-notice {
-    margin-top: 10%;
-    font-size: 4rem;
-    text-align: center;
-}
-.bouncing-effect {
-    animation: bouncing-effect 2s ease-in-out infinite;
-}
-.bouncing-effect-small {
-    animation: bouncing-effect-small 2s ease-in-out infinite;
-}
-@keyframes bouncing-effect {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-20px);
-      }
-      60% {
-        transform: translateY(-10px);
-      }
-}
-@keyframes bouncing-effect-small {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-3px);
-      }
-      60% {
-        transform: translateY(-1px);
-      }
-}
-
-/* ANIMATIONS ENDS */
-
-
-
-
-
-/* MEDIA QUERIES START */
-
-@media (max-width: 1000px) {
-    .content-container {
-        width: 50%;
-        font-size: 1rem;;
-    }
-    .site-name {
-        font-size: 3rem;;
-
-    }
-    .kanyes-quotes {
-        font-size: 1.5rem;;
-    }
-    .rating {
-        font-size: 1rem;
-    }
-}
-
-/* MEDIA QUERIES ENDS */
-
+/* GUESTBOOK ENDS GUESTBOOK ENDS GUESTBOOK ENDS GUESTBOOK ENDS GUESTBOOK ENDS GUESTBOOK ENDS GUESTBOOK ENDS  */
