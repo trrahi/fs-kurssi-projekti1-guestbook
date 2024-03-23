@@ -1,22 +1,12 @@
 [
   {
-    "name": "Tiina",
-    "message": "tiin",
-    "funFact": "tiina"
+    "name": "Vilma",
+    "message": "Hei, mitä kuuluu?",
+    "funFact": "Tykkään katsoa formuloita."
   },
   {
-    "name": "matti",
-    "message": "matti",
-    "funFact": "matti"
-  },
-  {
-    "name": "pekka",
-    "message": "joo",
-    "funFact": "mitäs"
-  },
-  {
-    "name": "terve",
-    "message": "joo",
-    "funFact": "okei"
+    "name": "Anni",
+    "message": "Moikka, sinulla on hieno sivusto!",
+    "funFact": "En ole koskaan käynyt Tallinnassa."
   }
 ]

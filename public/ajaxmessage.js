@@ -17,9 +17,9 @@ function formDataObject(name, message, funFact){
     this.message = message;
     this.funFact = funFact;
 }
-// Constructor for form data objects ENDS
 
 
+// Create object from from form values and send data to server to be saved to the guestbook. Response sends guestbook contents and success message, display guest book contents below the form
 function POSTform(e) {
     e.preventDefault()
     
@@ -31,10 +31,10 @@ function POSTform(e) {
     XHR.onreadystatechange = () => {
         if (XHR.readyState === 4 && XHR.status === 200) {
             const response = JSON.parse(XHR.responseText)
-            console.log(response);
-            console.log(response[2][0]);
-            console.log("moi");
-            console.log(XHR.status);
+            // console.log(response);
+            // console.log(response[2][0]);
+            // console.log("moi");
+            // console.log(XHR.status);
             for (let i = 0; i < response[1]; i++) {
                 console.log(i);
                 const guestbookItem = document.createElement("div")
@@ -43,7 +43,6 @@ function POSTform(e) {
                 guestbookContainer.insertAdjacentElement("beforeend", guestbookItem)
             }
             window.alert(response[0])
-            
         }
     }
     XHR.onerror = () => {

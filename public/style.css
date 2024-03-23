@@ -255,7 +255,13 @@ body {
 }
 /* NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS NAV ENDS  */
 
-
+.homepage {
+    font-size: 2rem;;
+    margin-inline: auto;
+    max-width: 50%;;
+    text-align: center;
+    margin-top: 3rem;;
+}
 
 
 
@@ -298,6 +304,7 @@ body {
 .guestbook-container {
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
 }
 .guestbook-item {
     display: flex;
@@ -305,7 +312,8 @@ body {
     width: 30%;
     align-items: center;
     text-align: center;
-    margin-block: 1rem;
+    margin-top: 2rem;
+    margin-block: 1.5rem;
     margin-inline: auto;
     border: 10px solid gold;
     border-radius: 20px;

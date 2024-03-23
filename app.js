@@ -4,7 +4,6 @@ const fs = require("fs")
 const express = require("express")
 const app = express()
 app.use(express.json());
-// Parse URL-encoded data with middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
@@ -13,6 +12,8 @@ app.set("view engine", "ejs")
 
 // Guestbook FP
 const guestbookFilePath = "./data/guestbook.json";
+
+
 
 
 // Respond with EJS pages to GET requests
@@ -37,8 +38,12 @@ app.get('/ajaxmessage', (req, res) => {
 });
 
 
+
+
+
+
 // Set operatoins to POST requests
-// Respond to request with guestbook content
+// Client requests guestbook contents
 app.post('/guestbook', (req, res) => {
     const guestBookContentsAsStr = fs.readFileSync(guestbookFilePath, "utf-8", (err) => {
         if (err) throw err;
@@ -48,7 +53,7 @@ app.post('/guestbook', (req, res) => {
     res.send(guestBookContentAsArray);
 });
 
-// New guest posts their information to guetsbook
+// New guest guests form, create AJAX call post data to server and save it
 app.post("/ajaxmessage", (req, res) => {
     const newGuest = req.body;
     let guestbookContentAsArray;
@@ -75,9 +80,8 @@ app.post("/ajaxmessage", (req, res) => {
     });
 });
 
-// New guest posts their information to guetsbook with non-ajax
+// New guest submits HTML form (non-ajax), save data to guestbook
 app.post("/newmessage", (req, res) => {
-
     const newGuest = req.body;
     let guestbookContentAsArray;
     fs.stat(guestbookFilePath, (err, stats) => {
@@ -89,15 +93,10 @@ app.post("/newmessage", (req, res) => {
         } else {
             guestbookContentAsArray = JSON.parse(fs.readFileSync(guestbookFilePath));
         }
-
         guestbookContentAsArray.push(newGuest);
         fs.writeFileSync(guestbookFilePath, JSON.stringify(guestbookContentAsArray, null, 2));
     });
-
-    
-    
     res.render("newmessage")
-
 });
 
 
@@ -118,7 +117,6 @@ app.use((req, res) => {
     res.render("404")
 })
 app.listen(8888, () => {
-    // console.log('Server is running on port 8888');
 });
 
 

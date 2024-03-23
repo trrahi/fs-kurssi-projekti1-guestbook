@@ -9,6 +9,7 @@ const funFactField = document.querySelector("#fun-fact")
 form.addEventListener("submit", POSTform)
 // Add event listeners ENDS
 
+
 function POSTform(e) {
     window.alert("Lomake lähetty, tsekkaa vieraskirja!")
 }
