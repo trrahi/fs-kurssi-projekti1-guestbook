@@ -9,44 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <script defer src="script.js"></script>
+    <script defer src="guestbook.js"></script>
 </head>
 <body>
     <!-- PAGE TITLE CONTAINER STARTS -->
-    <div class="page-title-container">
-        <header class="site-name">Tuomaksen vieraskirja</header>
-        <h1 class="desc">Tämä on vierjaskirja. Jätä terveisesi, jos uskallat. <br><br> 👽</h2>
-        </div>
+    <%- include("../partials/title.ejs") %>
     <!-- PAGE TITLE CONTAINER ENDS -->
         
     <!-- NAV CONTAINER STARTS  -->
-    <div class="nav-container">
-        <ul class="nav-items">
-            <a href="/">Koti</a>
-            <a href="/guestbook">Vieraskirja</a>
-            <a href="/newmessage">Uusi viesti</a>
-            <a href="/ajaxmessage">AJAX viesti</a>
-        </ul>        
-    </div>
+    <%- include("../partials/nav.ejs") %>
     <!-- NAV CONTAINER ENDS  -->
 
 
     <!-- GUESTBOOK CONTAINER STARST -->
-    <div class="guestbook-container">
-        <div class="guestbook-item">
-            <h2 class="guest-name-title">Nimi:</h2>
-            <p class="guest-name">Mikko</p>
-            <h2 class="guest-message-title">Viesti:</h2>
-            <p class="guest-message">Mitä kuuluu? Minulle kuuluu paskaa 💀</p>
-            <h2 class="guest-funfact-title">Fun fact:</h2>
-            <p class="guest-funfact">Tykkään mustikoista kitaran kanssa.</p>
-        </div>
-    </div>
-    
+    <%- include("../partials/guests.ejs") %>
     <!-- GUESTBOOK CONTAINER ENDS -->
-    
-
-
     
 </body>
 </html>
